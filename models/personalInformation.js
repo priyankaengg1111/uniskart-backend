@@ -17,7 +17,7 @@ const PersonalInformation = mongoose.model(
         mailingState:String,
         mailingCity:String,
         mailingpincode:String,
-        mailingAddressOne:String,
+     
 
         permanentAddressOne:String,
         permanentAddressTwo:String,
@@ -25,7 +25,7 @@ const PersonalInformation = mongoose.model(
         permanentState:String,
         permanentCity:String,
         permanentpincode:String,
-        permanentAddressOne:String,
+      
 
         passportNumber:String,
         issueDate:String,

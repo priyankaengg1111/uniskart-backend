@@ -7,10 +7,11 @@ const PersonalInformation = mongoose.model(
             ref: 'student'
         },
         educationEducationCountry: String,
-        educationPosition: String,
-        postGraduationEducationHighestLevel: String,
+        // educationPosition: String,
+        educationEducationHighestLevel: String,
         postGraduationBtudyLevel: String,
-        postGraduationBoardName: String,
+        //postGraduationBoardName: String,
+      
         postGraduationInstitutionName: String,
         postGraduationStudyCountry: String,
         postGraduationStudyState: String,
