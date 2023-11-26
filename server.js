@@ -6,7 +6,7 @@ const dotenv =require("dotenv");
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 // Parse incoming JSON data
 app.use(bodyParser.json());
