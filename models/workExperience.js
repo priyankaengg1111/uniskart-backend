@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const PersonalInformation = mongoose.model(
     "PersonalInformation",
     new mongoose.Schema({
@@ -9,16 +8,11 @@ const PersonalInformation = mongoose.model(
         },
         organizationName: String,
         position: String,
-
         jobProfile: String,
         workingFrom: String,
         workingUpto: String,
         salaryMode: String,
         workingHere: String,
-
-      
-   
     })
 );
-
 module.exports = PersonalInformation;
