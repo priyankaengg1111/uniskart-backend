@@ -23,7 +23,7 @@ const PersonalInformation = mongoose.model(
         postGraduationPtartDate: String,
         postGraduationEndDate: String,
         underGraduationEducationHighestLevel: String,
-        underGraduationBtudyLevel: String,
+        postGraduationStudyLevel: String,
         underGraduationBoardName: String,
         underGraduationInstitutionName: String,
         underGraduationStudyCountry: String,
