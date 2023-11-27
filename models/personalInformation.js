@@ -30,11 +30,23 @@ const PersonalInformation = mongoose.model(
         nationality:String,
         citizenship:String,
         moreCountryCitizenship:String,
+        moreCountryCitizenshipNationality:String,
         moreCountryLiving:String,
+
+        
+        moreCountryLivingNationality:String,
+
+
         migrationCountry:String,
         medicalCondition:String,
+        medicalConditionSpecify:String,
+
         visaRefusal:String,
+        visaRefusalCountry:String,
+
         criminal:String,
+        criminalSpecify:String,
+
         emergencyname:String,
         emergencyphone:String,
         emergencyemail:String,
