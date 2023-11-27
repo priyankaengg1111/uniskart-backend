@@ -22,7 +22,7 @@ const Test = mongoose.model(
         ieltsYetReceive: String,
         ieltsTestResultDate: String,
         ieltsTRFNo: String,
-        ieltsieltsWaiver: String,
+        ieltsIELTSWaiver: String,
         ieltsEnglishTwelvethMark: String,
         ieltsExaminationDate: String,
         ieltsReading: String,
