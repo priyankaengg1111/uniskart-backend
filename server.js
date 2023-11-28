@@ -12,7 +12,9 @@ const port = 5000;
 app.use(bodyParser.json());
 app.use(cors());
 // Handle registration endpoint
-const agentRegister = require("./routes/agentRegister");
+// const agentRegister = require("./routes/agentRegister");
+const agentRoute = require("./routes/agentRoute");
+
 const adminRegister = require("./routes/adminRegister");
 const workExperienceRoute = require("./routes/workExperienceRoute");
 const personalRoute = require("./routes/personalRoute");
@@ -20,7 +22,9 @@ const academicRoute = require("./routes/academicRoute");
 const testRoute = require("./routes/testRoute");
 
 
-app.use("/agent", agentRegister);
+app.use("/agent", agentRoute);
+// app.use("/agent", agentRegister);
+
 app.use("/admin", adminRegister);
 app.use("/student/work",workExperienceRoute)
 app.use("/student/personal",personalRoute)
