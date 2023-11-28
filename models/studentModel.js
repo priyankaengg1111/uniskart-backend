@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const Student = mongoose.model(
     "Student",
     new mongoose.Schema({
@@ -11,10 +10,7 @@ const Student = mongoose.model(
         middleName: String,
         lastName: String,
         phone: String,
-       
         email: String,
-   
     })
 );
-
 module.exports = Student;

@@ -17,6 +17,8 @@ const workExperienceRoute = require("./routes/workExperienceRoute");
 const personalRoute = require("./routes/personalRoute");
 const academicRoute = require("./routes/academicRoute");
 const testRoute = require("./routes/testRoute");
+const registerRoute = require("./routes/registerRoute");
+
 app.use("/agent", agentRoute);
 // app.use("/agent", agentRegister);
 app.use("/admin", adminRegister);
@@ -24,6 +26,8 @@ app.use("/student/work",workExperienceRoute)
 app.use("/student/personal",personalRoute)
 app.use("/student/academic",academicRoute)
 app.use("/student/test",testRoute)
+app.use("/student/register",registerRoute)
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
