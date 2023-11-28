@@ -9,7 +9,8 @@ const jwt = require("jsonwebtoken");
  */
 module.exports = {
     create: async function (req, res) {
-
+        console.log("whatthis",res.locals.agent)
+        var agentId=res.locals.agent._id;
         const { firstName,middleName,lastName,phone,email } = req.body;
         try {
             const existingStudent = await studentModel.findOne({
@@ -21,6 +22,7 @@ module.exports = {
             else {
             
                 const student = new studentModel({
+                    agentId,
                     firstName,
                     middleName,
                     lastName,

@@ -44,11 +44,12 @@ module.exports = {
             const user = await agentModel.findOne({ email });
             if (user && (password == user.password)) {
                 // Create token
+                console.log("myscrecet",process.env.TOKEN_KEY)
                 const token = jwt.sign(
-                    { user_id: user._id, email },
+                    { user_id: user._id, email,password },
                     process.env.TOKEN_KEY,
                     {
-                        expiresIn: "2h",
+                        expiresIn: "24h",
                     }
                 );
                 res.status(200).json({
