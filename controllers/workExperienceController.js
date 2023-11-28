@@ -18,7 +18,7 @@ module.exports = {
             workingHere,	
         });
         let result =await admin.save();
-        return result.status(201).json(result);
+        return res.status(201).json(result);
     },
     /**
      * adminController.remove()

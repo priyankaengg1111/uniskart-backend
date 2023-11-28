@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const PersonalInformation = mongoose.model(
-    "PersonalInformation",
+const Academic = mongoose.model(
+    "Academic",
     new mongoose.Schema({
         'studentId': {
             type: mongoose.Schema.Types.ObjectId,
@@ -56,4 +56,4 @@ const PersonalInformation = mongoose.model(
     
     })
 );
-module.exports = PersonalInformation;
+module.exports = Academic;
