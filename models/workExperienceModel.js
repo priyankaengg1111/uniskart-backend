@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-const PersonalInformation = mongoose.model(
-    "PersonalInformation",
+const WorkExperience = mongoose.model(
+    "WorkExperience",
     new mongoose.Schema({
         'studentId': {
-            type: Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'student'
         },
         organizationName: String,
@@ -15,4 +15,4 @@ const PersonalInformation = mongoose.model(
         workingHere: String,
     })
 );
-module.exports = PersonalInformation;
+module.exports = WorkExperience;

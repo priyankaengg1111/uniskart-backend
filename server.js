@@ -14,9 +14,14 @@ app.use(cors());
 // Handle registration endpoint
 const agentRegister = require("./routes/agentRegister");
 const adminRegister = require("./routes/adminRegister");
+const workExperienceRoute = require("./routes/workExperienceRoute");
+const personalRoute = require("./routes/personalRoute");
+
 
 app.use("/agent", agentRegister);
 app.use("/admin", adminRegister);
+app.use("/student/work",workExperienceRoute)
+app.use("/student/personal",personalRoute)
 
 
 // app.post('/agent/register', (req, res) => {

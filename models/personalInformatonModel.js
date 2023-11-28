@@ -3,7 +3,7 @@ const PersonalInformation = mongoose.model(
     "PersonalInformation",
     new mongoose.Schema({
         'studentId': {
-            type: Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'student'
         },
         dateOfBirth: String,

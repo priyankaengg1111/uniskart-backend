@@ -4,7 +4,7 @@ const Student = mongoose.model(
     "Student",
     new mongoose.Schema({
         'agentId': {
-            type: Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'agent'
         },
         firstName: String,
