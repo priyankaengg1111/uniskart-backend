@@ -3,6 +3,6 @@ var router = express.Router();
 var personalInformatonController = require('../controllers/personalInformatonController.js');
 
 
-router.post('/',personalInformatonController.create);
+router.post('/:id',personalInformatonController.create);
 
 module.exports = router;
