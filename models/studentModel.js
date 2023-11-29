@@ -11,6 +11,10 @@ const Student = mongoose.model(
         lastName: String,
         phone: String,
         email: String,
+        createdDate:Date,
+        createdBy:String,
+        assignedTo:String,
+        status:String
     })
 );
 module.exports = Student;

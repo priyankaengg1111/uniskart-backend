@@ -1,5 +1,7 @@
 'use strict';
 var agentModel = require('../models/agentModel.js');
+var studentModel = require('../models/studentModel.js');
+
 const jwt = require("jsonwebtoken");
 
 
@@ -44,9 +46,9 @@ module.exports = {
             const user = await agentModel.findOne({ email });
             if (user && (password == user.password)) {
                 // Create token
-                console.log("myscrecet",process.env.TOKEN_KEY)
+                console.log("myscrecet", process.env.TOKEN_KEY)
                 const token = jwt.sign(
-                    { user_id: user._id, email,password },
+                    { user_id: user._id, email, password },
                     process.env.TOKEN_KEY,
                     {
                         expiresIn: "24h",
@@ -65,6 +67,30 @@ module.exports = {
             res.status(500).json(err);
         }
 
+    },
+    allStudent: async function (req, res) {
+        try {
+            console.log("whatthis", res.locals.agent)
+
+
+            var agentId = res.locals.agent._id;
+            const allData = await studentModel.find({
+                agentId,
+            });
+
+            if (allData) {
+                res.status(200).json({
+                    status: true, data: allData
+                });
+            }else{
+                res.status(200).json({
+                    status: true, data: []
+                });
+            }
+            
+        } catch (err) {
+            res.status(500).json(err);
+        }
     }
     /**
      * adminController.remove()
