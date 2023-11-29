@@ -19,6 +19,11 @@ const academicRoute = require("./routes/academicRoute");
 const testRoute = require("./routes/testRoute");
 const registerRoute = require("./routes/registerRoute");
 
+app.get("/",(req,res)=>{
+  res.send({
+    message:"welcome to uniskart"
+  })
+})
 app.use("/agent", agentRoute);
 // app.use("/agent", agentRegister);
 app.use("/admin", adminRegister);
