@@ -4,5 +4,6 @@ var personalInformatonController = require('../controllers/personalInformatonCon
 
 
 router.post('/:id',personalInformatonController.create);
+router.get('/:id',personalInformatonController.show);
 
 module.exports = router;

@@ -60,6 +60,29 @@ module.exports = {
         res.status(500).json(err);
       }
     },
+    show:async function(req,res){
+        console.log("ji ji")
+        try{
+            console.log("wahthahs")
+            const allData = await personalInformatonModel.findOne({
+                studentId:req.params.id,
+            });
+            console.log("lst",allData)
+
+            if (allData!=null) {
+                console.log("ramram",allData)
+                res.status(200).json({ 
+                    status:true,
+                    data: allData });
+            }else{
+                res.status(200).json({ 
+                    status:true,
+                    data: 'noData' });
+            }
+        }catch(err){
+            res.status(500).json(err);
+        }
+    }
     /**
      * adminController.remove()
      */
