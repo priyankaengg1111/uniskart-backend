@@ -34,6 +34,7 @@ const PersonalInformation = mongoose.model(
         moreCountryLiving:String,
         moreCountryLivingNationality:String,
         migrationCountry:String,
+        migrationCountryName:String,
         medicalCondition:String,
         medicalConditionSpecify:String,
         visaRefusal:String,
