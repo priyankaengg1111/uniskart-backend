@@ -3,6 +3,8 @@ var router = express.Router();
 var academicController = require('../controllers/academicController.js');
 
 
-router.post('/',academicController.create);
+router.post('/:id',academicController.create);
+router.get('/:id',academicController.show);
+
 
 module.exports = router;
