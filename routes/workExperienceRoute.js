@@ -4,6 +4,9 @@ var workExperienceController = require('../controllers/workExperienceController.
 
 
 router.post('/:id',workExperienceController.create);
+
+router.put('/:id',workExperienceController.update);
+
 router.get('/:id',workExperienceController.show);
 
 

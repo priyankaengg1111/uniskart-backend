@@ -21,6 +21,22 @@ module.exports = {
         let result =await admin.save();
         return res.status(201).json(result);
     },
+    update: async function (req, res) {
+        try {
+          const { organizationName, position, jobProfile, workingFrom, workingUpto, salaryMode, workingHere } = req.body;
+          const result = await workExperienceModel.updateOne(
+            { studentId: req.params.id },
+            { $set: { organizationName, position, jobProfile, workingFrom, workingUpto, salaryMode, workingHere } }
+          );
+          return res.status(201).json({ message: 'Document updated successfully.' });
+         
+        } catch (err) {
+          console.log("myer", err);
+          return res.status(500).json({
+            error: err.message
+          });
+        }
+      },
     show:async function(req,res){
         try{
             const allData = await workExperienceModel.findOne({
