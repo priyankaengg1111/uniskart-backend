@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 const Test = mongoose.model(
     "Test",
     new mongoose.Schema({
+        'studentId': {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'student'
+        },
         greOverallScore: String,
         greExaminationDate: String,
         greQuantitative: String,

@@ -6,7 +6,7 @@ var testController = require('../controllers/testController.js');
 router.post('/:id',testController.create);
 router.put('/:id',testController.update);
 
-router.get('/:id',testController.create);
+router.get('/:id',testController.show);
 
 
 module.exports = router;
