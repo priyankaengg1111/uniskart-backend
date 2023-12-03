@@ -68,6 +68,23 @@ module.exports = {
             res.status(500).json(err);
         }
     },
+    update: async function (req, res) {
+        try {
+            const { educationEducationCountry, educationEducationHighestLevel, postGraduationStudyLevel, postGraduationInstitutionName, postGraduationStudyCountry, postGraduationStudyState, postGraduationStudyCity, postGraduationQualificationAchieved, postGraduationGradingSystem, postGraduationScore, postGraduationprimaryLanguage, postGraduationStartDate, postGraduationEndDate, underGraduationStudyLevel, underGraduationInstitutionName, underGraduationStudyCountry, underGraduationStudyState, underGraduationStudyCity, underGraduationQualificationAchieved, underGraduationGradingSystem, underGraduationScore, underGraduationprimaryLanguage, underGraduationStartDate, underGraduationEndDate, twelvethStudyLevel, twelvethInstitutionName, twelvethStudyCountry, twelvethStudyState, twelvethStudyCity, twelvethQualificationAchieved, twelvethGradingSystem, twelvethScore, twelvethprimaryLanguage, twelvethStartDate, twelvethEndDate, tenthStudyLevel, tenthInstitutionName, tenthStudyCountry, tenthStudyState, tenthStudyCity, tenthQualificationAchieved, tenthGradingSystem, tenthScore, tenthprimaryLanguage, tenthStartDate, tenthEndDate } = req.body;
+
+            const result = await academicModel.updateOne(
+                { studentId: req.params.id },
+                { $set: { educationEducationCountry, educationEducationHighestLevel, postGraduationStudyLevel, postGraduationInstitutionName, postGraduationStudyCountry, postGraduationStudyState, postGraduationStudyCity, postGraduationQualificationAchieved, postGraduationGradingSystem, postGraduationScore, postGraduationprimaryLanguage, postGraduationStartDate, postGraduationEndDate, underGraduationStudyLevel, underGraduationInstitutionName, underGraduationStudyCountry, underGraduationStudyState, underGraduationStudyCity, underGraduationQualificationAchieved, underGraduationGradingSystem, underGraduationScore, underGraduationprimaryLanguage, underGraduationStartDate, underGraduationEndDate, twelvethStudyLevel, twelvethInstitutionName, twelvethStudyCountry, twelvethStudyState, twelvethStudyCity, twelvethQualificationAchieved, twelvethGradingSystem, twelvethScore, twelvethprimaryLanguage, twelvethStartDate, twelvethEndDate, tenthStudyLevel, tenthInstitutionName, tenthStudyCountry, tenthStudyState, tenthStudyCity, tenthQualificationAchieved, tenthGradingSystem, tenthScore, tenthprimaryLanguage, tenthStartDate, tenthEndDate } }
+            );
+            return res.status(201).json({ message: 'Document updated successfully.' });
+
+        } catch (err) {
+            console.log("myer", err);
+            return res.status(500).json({
+                error: err.message
+            });
+        }
+    },
     show: async function (req, res) {
         try {
             const allData = await academicModel.findOne({
