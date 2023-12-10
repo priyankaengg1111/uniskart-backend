@@ -15,6 +15,8 @@ const agentRoute = require("./routes/agentRoute");
 const adminRegister = require("./routes/adminRegister");
 const workExperienceRoute = require("./routes/workExperienceRoute");
 const personalRoute = require("./routes/personalRoute");
+const mainInfoRoute = require("./routes/mainInfoRoute");
+
 const academicRoute = require("./routes/academicRoute");
 const testRoute = require("./routes/testRoute");
 const registerRoute = require("./routes/registerRoute");
@@ -29,6 +31,8 @@ app.use("/agent", agentRoute);
 app.use("/admin", adminRegister);
 app.use("/student/work",workExperienceRoute)
 app.use("/student/personal",personalRoute)
+app.use("/student/mainInfo",mainInfoRoute)
+
 app.use("/student/academic",academicRoute)
 app.use("/student/test",testRoute)
 app.use("/student/register",registerRoute)
